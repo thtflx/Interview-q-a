@@ -43,7 +43,7 @@ console.log(toInitials('United Fight Club'));
 function sumDigits(number) {
     return Math.abs(number)
         .toString()
-        .split('')
+        .split(' ')
         .reduce(
             function(sum, curr) {
                 return +sum + +curr
