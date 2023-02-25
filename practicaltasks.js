@@ -4,7 +4,7 @@
 function isPalindrome(str) {
     return str === str.split('').reverse().join('');
 }
-
+console.log(isPalindrome('uwu'));
 
 
 
@@ -59,9 +59,19 @@ console.log(sumDigits(33));
 
 // #5 
 // Функция поиска минимального и максимального значений в массиве?
-const minMax = (arr) => [
-    Math.min(...arr), Math.max(...arr)
-];
+// advanced
+function minMax(arr) {
+    return [
+        Math.min.apply(null, arr),
+        Math.max.apply(null, arr)
+    ];
+}
+
+// es6
+// const minMax = (arr) => [
+//     Math.min(...arr), Math.max(...arr)
+// ];
+console.log(minMax([2, 9, 10, 25, 47, 4, 1]));
 
 
 
@@ -137,6 +147,7 @@ function createPhoneNumber(number) {
     numArr.splice(9, 0, '-');
     return numArr.join('');
 }
+
 console.log(createPhoneNumber(9035265754));
 
 
@@ -149,4 +160,5 @@ const findVowels = (str) => {
     const matches = str.match(/[aeiou]/gi);
     return matches ? matches.length : 0;
 }
+
 console.log(findVowels('Hello'));
