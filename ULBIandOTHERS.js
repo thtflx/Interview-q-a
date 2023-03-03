@@ -87,6 +87,7 @@ name = "Alice";
 go();
 
 
+
 // ----------------------------------------------------
 
 
@@ -138,6 +139,7 @@ console.log(anotherObj);
 
 
 
+
 // Про Promise.
 // бульк.
 new Promise((resolve, reject) => {
@@ -177,6 +179,7 @@ console.log(res);
 
 
 
+
 // Деструктуризация.
 // бульк.
 let someArr = ['ULBI', 'TV']; // пример с массивами.
@@ -191,11 +194,38 @@ let options = { // пример с объектами.
 let { title, width, height } = options;
 
 
-
-
-
-
+// Map.
 // бульк.
+const arrr = [1, 2, 3, 4, 5, 6];
+
+const add = arrr.map((el) => {
+    return el + 1;
+});
+
+console.log(add);
+
+
+// Filter.
+// бульк.
+let arrrr = [1, 2, 3, 4, 5];
+let resul = arrrr.filter(function(el) {
+    return el % 2;
+});
+
+
+// Reduce.
+// бульк.
+let arry = [1, 2, 3, 4, 5];
+
+let ressult = arry.reduce(
+    function(sum, current) {
+        return sum + current;
+    }, 0);
+
+console.log(ressult);
+
+
+
 // бульк.
 // бульк.
 // бульк.
