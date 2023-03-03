@@ -220,12 +220,20 @@ let arry = [1, 2, 3, 4, 5];
 let ressult = arry.reduce(
     function(sum, current) {
         return sum + current;
-    }, 0);
+    }, 1);
 
 console.log(ressult); // 15
 
 
 
+// Map и Set.
 // бульк.
+
+
+
+
+
+
+
 // бульк.
 // бульк.
