@@ -197,12 +197,11 @@ let { title, width, height } = options;
 // Map.
 // бульк.
 const arrr = [1, 2, 3, 4, 5, 6];
-
 const add = arrr.map((el) => {
     return el + 1;
 });
 
-console.log(add);
+console.log(add); // [ 2, 3, 4, 5, 6, 7 ]
 
 
 // Filter.
@@ -212,17 +211,18 @@ let resul = arrrr.filter(function(el) {
     return el % 2;
 });
 
+console.log(resul); // [ 1, 3, 5 ]
+
 
 // Reduce.
 // бульк.
 let arry = [1, 2, 3, 4, 5];
-
 let ressult = arry.reduce(
     function(sum, current) {
         return sum + current;
     }, 0);
 
-console.log(ressult);
+console.log(ressult); // 15
 
 
 
