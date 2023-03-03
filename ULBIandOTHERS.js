@@ -228,7 +228,7 @@ console.log(ressult); // 15
 
 // Map и Set.
 // бульк.
-let map = new Map();
+let map = new Map(); // map
 
 map.set("1", "str1"); // строка в качестве ключа
 map.set(1, "num1"); // цифра как ключ
@@ -246,7 +246,7 @@ console.log(map.size); // 3
 
 
 
-let set = new Set();
+let set = new Set(); // set
 
 let john = { name: "John" };
 let pete = { name: "Pete" };
@@ -256,14 +256,13 @@ let mary = { name: "Mary" };
 set.add(john);
 set.add(pete);
 set.add(mary);
-set.add(john);
-set.add(mary);
 
+console.log(set);
 // set хранит только 3 уникальных значения
-alert(set.size); // 3
+console.log(set.size); // 3
 
 for (let user of set) {
-    alert(user.name); // John (потом Pete и Mary)
+    console.log(user.name); // John (потом Pete и Mary)
 }
 
 
