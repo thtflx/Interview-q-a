@@ -246,30 +246,25 @@ console.log(map.size); // 3
 
 
 
-let recipeMap = new Map([
-    ["огурец", 500],
-    ["помидор", 350],
-    ["лук", 50]
-]);
+let set = new Set();
 
-// перебор по ключам (овощи)
-for (let vegetable of recipeMap.keys()) {
-    alert(vegetable); // огурец, помидор, лук
+let john = { name: "John" };
+let pete = { name: "Pete" };
+let mary = { name: "Mary" };
+
+// считаем гостей, некоторые приходят несколько раз
+set.add(john);
+set.add(pete);
+set.add(mary);
+set.add(john);
+set.add(mary);
+
+// set хранит только 3 уникальных значения
+alert(set.size); // 3
+
+for (let user of set) {
+    alert(user.name); // John (потом Pete и Mary)
 }
-
-// перебор по значениям (числа)
-for (let amount of recipeMap.values()) {
-    alert(amount); // 500, 350, 50
-}
-
-// перебор по элементам в формате [ключ, значение]
-for (let entry of recipeMap) { // то же самое, что и recipeMap.entries()
-    alert(entry); // огурец,500 (и так далее)
-}
-
-
-
-
 
 
 // бульк.
