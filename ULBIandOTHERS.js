@@ -234,12 +234,14 @@ map.set("1", "str1"); // строка в качестве ключа
 map.set(1, "num1"); // цифра как ключ
 map.set(true, "bool1"); // булево значение как ключ
 
-// помните, обычный объект Object приводит ключи к строкам?
-// Map сохраняет тип ключей, так что в этом случае сохранится 2 разных значения:
-alert(map.get(1)); // "num1"
-alert(map.get("1")); // "str1"
+console.log(map); // Map(3) { '1' => 'str1', 1 => 'num1', true => 'bool1' }
 
-alert(map.size); // 3
+
+// Map сохраняет тип ключей, так что в этом случае сохранится 2 разных значения:
+console.log(map.get(1)); // "num1"
+console.log(map.get("1")); // "str1"
+
+console.log(map.size); // 3
 
 
 
