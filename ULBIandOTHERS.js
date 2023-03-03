@@ -85,3 +85,117 @@ function go() {
 
 name = "Alice";
 go();
+
+
+// ----------------------------------------------------
+
+
+// ULBI TV.
+// call, apply, bind.
+// бульк.
+function showname(name, lastname) {
+    console.log(`Name: ${this.name}
+    surname: ${this.lastname}`);
+}
+
+const jersey = {
+    name: "Jersey",
+    lastname: "Adams"
+};
+
+showname.call(jersey);
+showname.apply(jersey);
+const bindTest = showname.bind(jersey);
+bindTest();
+
+
+
+// Способы создания объектов.
+// бульк.
+const firstObj = { // первый метод* с помошью литеральной нотации.
+    key: 'value'
+}
+
+
+function OtherObj(other, another) { // второй метод* с помошью функций
+    this.other = other;
+    this.another = another;
+}
+
+const otherObj = new OtherObj('Other', 'Another');
+console.log(otherObj);
+
+
+class AnotherObj { // третий метод* с помошью класса
+    constructor(name, surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+}
+
+const anotherObj = new AnotherObj('Happy', 'Meal');
+console.log(anotherObj);
+
+
+
+// Про Promise.
+// бульк.
+new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('RIGHT!');
+    }, 1000);
+})
+
+.then(data => console.log(data))
+    .catch(err => console.log(err))
+    .finally(fnl => console.log(`Finally worked!`));
+
+
+
+// Как поменять контекст функции?
+// бульк.
+function fn() {
+    console.log(this);
+}
+
+const obj = { name: 'ULBI TV' };
+
+fn.call(obj, 'Finn', 'Jake');
+fn.apply(obj, ['Finn', 'Jake']);
+
+
+// Тернарный оператор.
+// бульк.
+if (true) {
+    console.log('True content.');
+} else {
+    console.log('False content.');
+}
+
+let res = true ? 'True Content!' : 'False Content!';
+console.log(res);
+
+
+
+// Деструктуризация.
+// бульк.
+let someArr = ['ULBI', 'TV']; // пример с массивами.
+let [firstName, lastName] = someArr;
+
+
+let options = { // пример с объектами.
+    title: 'Menu',
+    width: 100,
+    height: 500
+};
+let { title, width, height } = options;
+
+
+
+
+
+
+// бульк.
+// бульк.
+// бульк.
+// бульк.
