@@ -228,7 +228,7 @@ console.log(ressult); // 15
 
 // Map и Set.
 // бульк.
-let map = new Map(); // map
+let map = new Map(); // map.
 
 map.set("1", "str1"); // строка в качестве ключа
 map.set(1, "num1"); // цифра как ключ
@@ -246,7 +246,7 @@ console.log(map.size); // 3
 
 
 
-let set = new Set(); // set
+let set = new Set(); // set.
 
 let john = { name: "John" };
 let pete = { name: "Pete" };
