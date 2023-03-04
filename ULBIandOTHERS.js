@@ -296,3 +296,248 @@ set.add(pete);
 set.add(mary);
 
 console.log(set); // Set(3) { { name: 'John' }, { name: 'Pete' }, { name: 'Mary' } }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// TEST ZONE.
+new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (true) {
+                resolve(`How are u?`);
+            } else {
+                reject(`I'm so sorry(`);
+            }
+        }, 2000);
+    })
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err))
+    .finally((some) => console.log(`Code was done.`));
+
+
+// свойство объекта.
+const othObj = {
+    key1: 'value1',
+    key2: 'value2'
+};
+
+console.log(othObj.key1);
+console.log(othObj['key1']);
+
+
+
+// falsy.
+-
+!!0
+    -
+    false -
+    null -
+    undefined -
+    NaN
+
+
+// опр. начилие свойства в объекте.
+const valueObj = {
+    someKey: 'someValue'
+}
+
+console.log(valueObj.hasOwnProperty('someKey'));
+console.log('someKey' in valueObj);
+
+
+
+// map/ filter/ reduce and forEach.
+const massive = [1, 2, 3, 4, 5];
+
+const res1 = massive.map(
+    function(el) {
+        return el + 2;
+    }
+);
+
+console.log(res1);
+
+
+const res2 = massive.filter(
+    function(el) {
+        return el % 2;
+    }
+);
+
+console.log(res2);
+
+
+
+const res3 = massive.reduce(
+    function(summ, currentt) {
+        return summ + currentt;
+    }, 10
+);
+
+console.log(res3);
+
+
+
+
+
+
+// прототипное наследование.
+const animal = {
+    eats: 'carrot'
+}
+
+const bird = {
+    chews: 'gym'
+}
+
+animal.__proto__ = bird;
+bird.__proto__ = animal;
+
+console.log(animal.chews);
+console.log(bird.eats);
+
+
+
+
+
+
+
+// деструктуризация.
+const destArr = ['BMW', 'M5'];
+const [namee, modell] = destArr;
+
+const destObj = {
+    tittle: 'Bookky',
+    subtittle: '11th.'
+};
+const { tittle, subtittle } = destObj;
+
+
+
+// замыкание.
+const createPhrase = (greeting) => {
+    return (name) => `${name} ${greeting}`;
+};
+
+const sayHi = createPhrase('hey!');
+console.log(sayHi('Alexander'));
+
+
+
+// обработка ошибок.
+try {
+
+} catch (err) {
+
+} finally {
+
+}
+
+
+// способы создания объектов.
+const litObj = {
+    name: 'Fill'
+}
+
+function User(name, surname) {
+    this.name = name;
+    this.surname = surname;
+}
+
+const user = new User('Alexander', 'Belov');
+console.log(user);
+
+
+class Cuser {
+    constructor(name, surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+}
+
+const cuser = new Cuser('Jack', 'McColahey');
+console.log(cuser);
+
+
+
+// шаблонные литералы.
+// `` ${}, можно перенести строку.
+
+
+
+
+
+// избежание ссылочной зависимости.
+const object = {
+    smodel: 'Tesla DZ'
+}
+
+const otherObject = JSON.parse(JSON.stringify(object));
+console.log(otherObject);
+
+
+
+
+
+
+
+// set и map.
+const set1 = new Set();
+
+const johny = { name: 'johny' };
+const alex = { name: 'alex' };
+
+set1.add(johny);
+set1.add(alex);
+
+console.log(set1);
+
+
+
+const map1 = new Map();
+
+map1.set('name1', 'kyle');
+map1.set('name2', 'sam');
+
+console.log(map1);
+
+
+
+
+
+
+// поменять контекст функции.
+function fn() {
+    console.log(this);
+};
+
+const fnObj = {
+    name: 'Alex',
+    surname: 'Pereira'
+};
+
+fn.call(fnObj, 'arg1', 'arg2');
+
+
+
+// 14, 20
