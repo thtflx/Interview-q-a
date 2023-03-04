@@ -257,7 +257,7 @@ set.add(john);
 set.add(pete);
 set.add(mary);
 
-console.log(set);
+console.log(set); // Set(3) { { name: 'John' }, { name: 'Pete' }, { name: 'Mary' } }
 // set хранит только 3 уникальных значения
 console.log(set.size); // 3
 
