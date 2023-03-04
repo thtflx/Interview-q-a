@@ -117,7 +117,9 @@ const firstObj = { // первый метод* с помошью литерал�
     key: 'value'
 }
 
+console.log(firstObj);
 
+// ----
 function OtherObj(other, another) { // второй метод* с помошью функций
     this.other = other;
     this.another = another;
@@ -126,7 +128,7 @@ function OtherObj(other, another) { // второй метод* с помошь�
 const otherObj = new OtherObj('Other', 'Another');
 console.log(otherObj);
 
-
+// ----
 class AnotherObj { // третий метод* с помошью класса
     constructor(name, surname) {
         this.name = name;
@@ -228,34 +230,34 @@ console.log(ressult); // 15
 
 // Map и Set.
 // бульк.
-let map = new Map(); // map.
+// let map = new Map(); // map.
 
-map.set("1", "str1"); // строка в качестве ключа
-map.set(1, "num1"); // цифра как ключ
-map.set(true, "bool1"); // булево значение как ключ
+// map.set("1", "str1"); // строка в качестве ключа
+// map.set(1, "num1"); // цифра как ключ
+// map.set(true, "bool1"); // булево значение как ключ
 
-console.log(map); // Map(3) { '1' => 'str1', 1 => 'num1', true => 'bool1' }
-
-
-// Map сохраняет тип ключей, так что в этом случае сохранится 2 разных значения:
-console.log(map.get(1)); // "num1"
-console.log(map.get("1")); // "str1"
-
-console.log(map.size); // 3
+// console.log(map); // Map(3) { '1' => 'str1', 1 => 'num1', true => 'bool1' }
 
 
+// // Map сохраняет тип ключей, так что в этом случае сохранится 2 разных значения:
+// console.log(map.get(1)); // "num1"
+// console.log(map.get("1")); // "str1"
+
+// console.log(map.size); // 3
 
 
-let set = new Set(); // set.
 
-let john = { name: "John" };
-let pete = { name: "Pete" };
-let mary = { name: "Mary" };
 
-// считаем гостей, некоторые приходят несколько раз
-set.add(john);
-set.add(pete);
-set.add(mary);
+// let set = new Set(); // set.
+
+// let john = { name: "John" };
+// let pete = { name: "Pete" };
+// let mary = { name: "Mary" };
+
+// // считаем гостей, некоторые приходят несколько раз
+// set.add(john);
+// set.add(pete);
+// set.add(mary);
 
 console.log(set); // Set(3) { { name: 'John' }, { name: 'Pete' }, { name: 'Mary' } }
 // set хранит только 3 уникальных значения
@@ -268,3 +270,29 @@ for (let user of set) {
 
 // бульк.
 // бульк.
+
+
+
+// MAP.
+let map = new Map(); // map.
+
+map.set("1", "str1"); // строка в качестве ключа
+map.set(1, "num1"); // цифра как ключ
+map.set(true, "bool1"); // булево значение как ключ
+
+console.log(map); // Map(3) { '1' => 'str1', 1 => 'num1', true => 'bool1' }
+
+
+// SET.
+let set = new Set(); // set.
+
+let john = { name: "John" };
+let pete = { name: "Pete" };
+let mary = { name: "Mary" };
+
+// считаем гостей, некоторые приходят несколько раз
+set.add(john);
+set.add(pete);
+set.add(mary);
+
+console.log(set); // Set(3) { { name: 'John' }, { name: 'Pete' }, { name: 'Mary' } }
