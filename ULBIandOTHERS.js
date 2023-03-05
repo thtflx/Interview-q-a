@@ -541,3 +541,165 @@ fn.call(fnObj, 'arg1', 'arg2');
 
 
 // 14, 20
+
+// async/await.
+async function fetchTodos(url) {
+    const resp = await fetch(url);
+    const json = await resp.json();
+    console.log(json); // ассинхронный код будет выполняться последовательно.
+}
+
+
+
+// использование async/await для асинхронных запросов.
+async function fetchApi(url) {
+    const responsive = await fetch(url);
+    const json = await responsive.json();
+    json.forEach(item => console.log(item));
+}
+
+
+
+
+
+
+// повторение.
+const createPhrasee = (greeting) => {
+    return (name) => `${greeting}, ${name}!`;
+};
+
+const sayHello = createPhrasee('Hello');
+console.log(sayHello('Danzel'));
+
+
+
+// -
+const mappp = new Map();
+
+mappp.set(true, 'duck');
+console.log(mappp);
+
+
+
+const settt = new Set();
+
+const jimmy = { name: 'Jimmi' };
+
+settt.add(jimmy);
+console.log(settt);
+
+
+
+
+
+// -
+// number
+// string
+// boolean
+// bigint
+// object
+// null
+// undefined
+// symbol
+
+
+
+
+// -
+if (true) {
+    const a = 'a';
+    let b = 'b';
+    var c = 'c';
+}
+
+console.log(c);
+console.log(b);
+console.log(a);
+
+
+
+
+// -
+const nalObj = {
+    name: 'Dakkorta'
+}
+
+
+console.log(nalObj.hasOwnProperty('name'));
+console.log('name' in nalObj);
+
+
+
+// -
+new Promise((resolve, reject) => {
+        if (false) {
+            resolve('Worked!');
+        } else {
+            reject(`Doesn't work!`);
+        }
+    })
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err))
+    .finally((fnll) => console.log(`Completed.`));
+
+
+
+// - 
+console.log(!!0);
+console.log(!!'');
+console.log(false);
+console.log(!!null);
+console.log(!!undefined);
+console.log(!!NaN);
+
+
+
+
+
+// - 
+const littObj = {
+    name: 'Lit'
+}
+
+
+class Usy {
+    constructor(name) {
+        this.name = name;
+    }
+}
+
+const usy = new Usy('Usy');
+console.log(usy);
+
+
+
+function Usu(name) {
+    this.name = name;
+}
+
+const usu = new Usu('Usu');
+console.log(usu);
+
+
+
+
+// - 
+const mapArr = [10, 20, 30, 40, 50];
+const result1 = mapArr.map((el) => {
+    return el + 10;
+});
+console.log(result1);
+
+
+const result2 = mapArr.filter((el) => {
+    return el % 2;
+});
+console.log(result2);
+
+const result3 = mapArr.reduce(
+    function reduceFn(summ, curr) {
+        return summ + curr;
+    }, 10
+);
+
+console.log(result3);
