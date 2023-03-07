@@ -703,3 +703,14 @@ const result3 = mapArr.reduce(
 );
 
 console.log(result3);
+
+
+
+
+
+
+
+
+
+
+// повторение.
