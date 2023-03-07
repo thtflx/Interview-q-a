@@ -239,3 +239,199 @@ const groupBy = (arr, callbackFunction) => {
 
 groupBy([6.1, 4.2, 6.3], Math.floor);
 // { '4': [ 4.2 ], '6': [ 6.1, 6.3 ] }
+
+
+
+
+
+
+
+// -----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+// FCC iw basics.
+
+//! ---------
+// #1
+function convertCtoF(celsius) {
+    let fahrenheit = celsius * 9 / 5 + 32;
+    return fahrenheit;
+}
+console.log(convertCtoF(30));
+// 86
+
+
+
+
+//! ---------
+// #2
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+console.log(reverseString("hello"));
+// olleh
+
+
+
+
+
+//! ---------
+// #3
+function factorialize(num) {
+    let total = 1;
+
+    for (let i = 0; i < num; i++) {
+        // total *= i + 1;
+        total = total * (i + 1);
+    }
+    return total;
+}
+
+console.log(factorialize(5));
+// 120
+
+
+
+
+//! ---------
+// #4 
+function findLongestWordLength(str) {
+    let arr = str.split(" "); // 3
+    let biggest = arr[0].length; // 5 *это самое первое слово из массива*
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length > biggest) {
+            biggest = arr[i].length;
+        }
+    }
+    return biggest;
+}
+
+console.log(findLongestWordLength("Piece of sheet"));
+// 5
+
+
+
+
+//! ---------
+// #5
+function largestOfFour(arr) {
+    let answer = [];
+
+    for (let i = 0; i < arr.length; i++) {
+
+        let highest = arr[i][0];
+
+        for (let j = 0; j < arr[i].length; j++) {
+            if (arr[i][j] > highest) {
+                highest = arr[i][j];
+            }
+        }
+        answer.push(highest);
+    }
+    return answer;
+}
+
+console.log(largestOfFour([
+    [4, 5, 1, 3],
+    [13, 27, 18, 26],
+    [32, 35, 37, 39],
+    [1000, 1001, 857, 1]
+]));
+// [ 5, 27, 39, 1001 ]
+
+
+
+
+
+//! ---------
+// #6
+function confirmEnding(str, target) {
+    let ending = str.split("").splice(str.length - target.length).join("");
+    console.log(ending);
+
+    return ending == target;
+}
+
+confirmEnding("Bastian", "xxxx");
+// tian
+
+
+
+
+
+//! ---------
+// #7
+function repeatStringNumTimes(str, num) {
+    let answer = "";
+
+    if (num <= 0) {
+        return "";
+    }
+
+    for (let i = 0; i < num; i++) {
+        answer += str;
+    }
+
+    return answer;
+}
+
+console.log(repeatStringNumTimes("abc", 30));
+// abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc
+
+
+
+
+//! ---------
+// #8
+function truncateString(str, num) {
+
+    if (str.length <= num) {
+        return str;
+    }
+
+    let ourStr = str.split("").splice(0, num).join("");
+
+    return ourStr + "...";
+}
+
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", 1897));
+// A-tisket a-tasket A green and yellow basket
+
+
+
+
+//! ---------
+// #9
+function findElement(arr, func) {
+    for (let i = 0; i < arr.length; i++) {
+        if (func(arr[i])) {
+            return arr[i];
+        }
+    }
+}
+
+console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
+// 2
+
+
+
+
+//! ---------
+// #10
+function booWho(bool) {
+    if (typeof bool == 'boolean') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(booWho(true));
+// true
