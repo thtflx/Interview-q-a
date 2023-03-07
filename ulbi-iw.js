@@ -63,6 +63,7 @@ new Promise((resolve, reject) => {
 
 
 
+
 // Как поменять контекст функции?
 // бульк.
 function fn() {
@@ -73,6 +74,8 @@ const obj = { name: 'ULBI TV' };
 
 fn.call(obj, 'Finn', 'Jake');
 fn.apply(obj, ['Finn', 'Jake']);
+
+
 
 
 // Тернарный оператор.
@@ -94,13 +97,13 @@ console.log(res);
 let someArr = ['ULBI', 'TV']; // пример с массивами.
 let [firstName, lastName] = someArr;
 
-
 let options = { // пример с объектами.
     title: 'Menu',
     width: 100,
     height: 500
 };
 let { title, width, height } = options;
+
 
 
 // Map.
@@ -113,6 +116,8 @@ const add = arrr.map((el) => {
 console.log(add); // [ 2, 3, 4, 5, 6, 7 ]
 
 
+
+
 // Filter.
 // бульк.
 let arrrr = [1, 2, 3, 4, 5];
@@ -121,6 +126,7 @@ let resul = arrrr.filter(function(el) {
 });
 
 console.log(resul); // [ 1, 3, 5 ]
+
 
 
 // Reduce.
@@ -135,48 +141,6 @@ console.log(ressult); // 15
 
 
 
-// Map и Set.
-// бульк.
-// let map = new Map(); // map.
-
-// map.set("1", "str1"); // строка в качестве ключа
-// map.set(1, "num1"); // цифра как ключ
-// map.set(true, "bool1"); // булево значение как ключ
-
-// console.log(map); // Map(3) { '1' => 'str1', 1 => 'num1', true => 'bool1' }
-
-
-// // Map сохраняет тип ключей, так что в этом случае сохранится 2 разных значения:
-// console.log(map.get(1)); // "num1"
-// console.log(map.get("1")); // "str1"
-
-// console.log(map.size); // 3
-
-
-
-
-// let set = new Set(); // set.
-
-// let john = { name: "John" };
-// let pete = { name: "Pete" };
-// let mary = { name: "Mary" };
-
-// // считаем гостей, некоторые приходят несколько раз
-// set.add(john);
-// set.add(pete);
-// set.add(mary);
-
-console.log(set); // Set(3) { { name: 'John' }, { name: 'Pete' }, { name: 'Mary' } }
-// set хранит только 3 уникальных значения
-console.log(set.size); // 3
-
-for (let user of set) {
-    console.log(user.name); // John (потом Pete и Mary)
-}
-
-
-// бульк.
-// бульк.
 
 
 
@@ -188,6 +152,13 @@ map.set(1, "num1"); // цифра как ключ
 map.set(true, "bool1"); // булево значение как ключ
 
 console.log(map); // Map(3) { '1' => 'str1', 1 => 'num1', true => 'bool1' }
+// еще несколько методов:
+console.log(map.get(1)); // "num1"
+console.log(map.get("1")); // "str1"
+
+console.log(map.size); // 3
+
+
 
 
 // SET.
@@ -211,10 +182,7 @@ console.log(set); // Set(3) { { name: 'John' }, { name: 'Pete' }, { name: 'Mary'
 
 
 
-
-
-
-
+// -----------------------------------------------------------------------------------------
 
 
 
@@ -225,19 +193,6 @@ console.log(set); // Set(3) { { name: 'John' }, { name: 'Pete' }, { name: 'Mary'
 
 
 // ДОПОЛНИТЕЛЬНО.
-new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (true) {
-                resolve(`How are u?`);
-            } else {
-                reject(`I'm so sorry(`);
-            }
-        }, 2000);
-    })
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err))
-    .finally((some) => console.log(`Code was done.`));
-
 
 
 
@@ -270,6 +225,7 @@ const valueObj = {
 
 console.log(valueObj.hasOwnProperty('someKey'));
 console.log('someKey' in valueObj);
+
 
 
 
@@ -327,19 +283,6 @@ console.log(bird.eats);
 
 
 
-// деструктуризация.
-const destArr = ['BMW', 'M5'];
-const [namee, modell] = destArr;
-
-const destObj = {
-    tittle: 'Bookky',
-    subtittle: '11th.'
-};
-const { tittle, subtittle } = destObj;
-
-
-
-
 // замыкание.
 const createPhrase = (greeting) => {
     return (name) => `${name} ${greeting}`;
@@ -347,6 +290,8 @@ const createPhrase = (greeting) => {
 
 const sayHi = createPhrase('hey!');
 console.log(sayHi('Alexander'));
+
+
 
 
 
@@ -361,35 +306,9 @@ try {
 
 
 
-// способы создания объектов.
-const litObj = {
-    name: 'Fill'
-}
-
-function User(name, surname) {
-    this.name = name;
-    this.surname = surname;
-}
-
-const user = new User('Alexander', 'Belov');
-console.log(user);
-
-
-class Cuser {
-    constructor(name, surname) {
-        this.name = name;
-        this.surname = surname;
-    }
-}
-
-const cuser = new Cuser('Jack', 'McColahey');
-console.log(cuser);
-
-
-
 
 // шаблонные литералы.
-// `` ${}, можно перенести строку.
+// `` - ${}, можно перенести строку.
 
 
 
@@ -402,20 +321,6 @@ const object = {
 const otherObject = JSON.parse(JSON.stringify(object));
 console.log(otherObject);
 
-
-
-
-// поменять контекст функции.
-function fn() {
-    console.log(this);
-};
-
-const fnObj = {
-    name: 'Alex',
-    surname: 'Pereira'
-};
-
-fn.call(fnObj, 'arg1', 'arg2');
 
 
 

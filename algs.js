@@ -1,4 +1,5 @@
 // PRACTICAL TASKS.
+// YAUHENY KOVALCHUK.
 // #1 
 // Функция проверки палиндрома?
 function isPalindrome(str) {
@@ -165,7 +166,7 @@ console.log(findVowels('Hello'));
 
 
 
-
+// -----------------------------------------------------------------------------------------
 
 
 
