@@ -6,7 +6,7 @@ function isPalindrome(str) {
     return str === str.split('').reverse().join('');
 }
 console.log(isPalindrome('uwu'));
-
+// true
 
 
 
@@ -19,6 +19,7 @@ function findShort(string) {
 }
 
 console.log(findShort('Blaim some sheet of bee or tea'));
+// U.F.C.
 
 
 
@@ -34,7 +35,7 @@ function toInitials(name) {
 }
 
 console.log(toInitials('United Fight Club'));
-
+// U.F.C.
 
 
 
@@ -53,7 +54,7 @@ function sumDigits(number) {
 }
 
 console.log(sumDigits(33));
-
+// 6
 
 
 
@@ -73,6 +74,7 @@ function minMax(arr) {
 //     Math.min(...arr), Math.max(...arr)
 // ];
 console.log(minMax([2, 9, 10, 25, 47, 4, 1]));
+// [ 1, 47 ]
 
 
 
@@ -89,6 +91,7 @@ function accum(str) {
 }
 
 console.log(accum('abcdef'));
+// A-Bb-Ccc-Dddd-Eeeee-Ffffff
 
 
 
@@ -109,7 +112,7 @@ function capitals(word) {
 }
 
 console.log(capitals('PiEcE oF soaP'));
-
+// [ 0, 2,  4, 5, 7, 8, 12 ]
 
 
 
@@ -133,7 +136,7 @@ function uniteUnique() {
 // }
 
 console.log(uniteUnique([1, 2, 3], [4, 1, 5], [6, 7, 8, 5]));
-
+// [ 1, 2, 3, 4, 5, 6, 7, 8 ]
 
 
 
@@ -150,7 +153,7 @@ function createPhoneNumber(number) {
 }
 
 console.log(createPhoneNumber(9035265754));
-
+// (903) 526-5754
 
 
 
@@ -163,6 +166,7 @@ const findVowels = (str) => {
 }
 
 console.log(findVowels('Hello'));
+// 2
 
 
 
