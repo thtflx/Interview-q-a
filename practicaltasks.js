@@ -162,3 +162,75 @@ const findVowels = (str) => {
 }
 
 console.log(findVowels('Hello'));
+
+
+
+
+
+
+
+
+// ULBI interview.
+// 01 - Реализовать функию, которая будет суммирвоать числа и выводить в логи.
+function sum(n) {
+    console.log(n);
+    return function(a) {
+        return sum(a + n);
+    };
+}
+
+sum(5);
+console.log('-----');
+sum(5)(4)(11);
+// 5
+// -----
+// 5
+// 9
+// 20
+
+
+
+
+
+
+
+// 02 - Функция принимает два объекта с разными ключами некоторые из которых могут пересекаться.
+// Необходимо вернуть первый объект с обновленными значениями из второго объекта (только те которые совпадают).
+const margeSameKeysOfObject = (obj1, obj2) => {
+    for (const key in obj1) {
+        if (obj2.hasOwnProperty(key)) {
+            obj1[key] = obj2[key];
+        }
+    }
+    console.log(obj1);
+}
+
+margeSameKeysOfObject({ foo: 'foo', bar: 'bar' }, { bar: 'press', some: 'some' });
+// { foo: 'foo', bar: 'press' }
+
+
+
+
+
+
+
+
+// 03 - Реализовать функцию которая принимает 2 параметра:
+// - массив значений ;
+// - коллбэк по результату которого будут группироваться значения ;
+
+// Функция должна возвращать составной совокупный объект
+// где ключи это название групп, а значения сами группы.
+const groupBy = (arr, callbackFunction) => {
+    const result = {};
+    arr.forEach(item => {
+        let resultAfterCallback = callbackFunction(item);
+        result[resultAfterCallback] ?
+            result[resultAfterCallback].push(item) :
+            result[resultAfterCallback] = [item]
+    })
+    console.log(result);
+};
+
+groupBy([6.1, 4.2, 6.3], Math.floor);
+// { '4': [ 4.2 ], '6': [ 6.1, 6.3 ] }
