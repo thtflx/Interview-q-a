@@ -1,96 +1,3 @@
-// Sergey Puzankov sbs.
-// Дупликация одного массива в другую.
-const duplicate = (arr) => [...arr, ...arr];
-console.log(duplicate([1, 2, 3, 4, 5]));
-
-// Написать IIFE.
-(function() {
-    return 1;
-})();
-
-console.log(iife);
-
-
-// Про делегирование.
-const parent = document.querySelector(".parent");
-const items = document.querySelectorAll(".item");
-
-// items.forEach((item) => {
-//   item.addEventListener("click", () => {
-//     console.log(item);
-//   });
-// });
-
-const newItem = document.createElement("li");
-newItem.innerText = "Melon";
-parent.append(newItem);
-
-parent.addEventListener("click", (event) => {
-    if (event.target && event.target.tagName === 'LI') {
-        console.log('clicked');
-    }
-});
-
-
-
-// блиц
-let b = {}; // b:1
-let c; // b:2
-
-b.b = 1;
-
-c = b;
-c.b = 2;
-
-console.log(b.b);
-console.log(c.b);
-
-// блиц
-let arr = [1, 2, 3, 4, 5];
-let result = arr.filter(function(el) {
-    return el % 2;
-});
-
-console.log(result);
-
-// блиц
-var x = 7;
-console.log(++x);
-console.log(x++);
-
-// блиц
-console.log(0.1 + 0.2 - 0.2 == 0.1);
-
-// блиц
-var j = { name: "Felix" };
-var k = { name: "Felix" };
-console.log(j === k);
-
-// блиц
-function f1(a, b) {
-    console.log(a, b);
-}
-
-let f2 = f1.bind(null, "foo");
-
-f2("bar", "baz");
-
-// блиц
-let name = "rabbit";
-
-function go() {
-    let name = "Forest";
-    console.log(`Run ${name}, run!`);
-}
-
-name = "Alice";
-go();
-
-
-
-// ----------------------------------------------------
-
-
 // ULBI TV.
 // call, apply, bind.
 // бульк.
@@ -317,10 +224,7 @@ console.log(set); // Set(3) { { name: 'John' }, { name: 'Pete' }, { name: 'Mary'
 
 
 
-
-
-
-// TEST ZONE.
+// ДОПОЛНИТЕЛЬНО.
 new Promise((resolve, reject) => {
         setTimeout(() => {
             if (true) {
@@ -335,6 +239,8 @@ new Promise((resolve, reject) => {
     .finally((some) => console.log(`Code was done.`));
 
 
+
+
 // свойство объекта.
 const othObj = {
     key1: 'value1',
@@ -346,7 +252,8 @@ console.log(othObj['key1']);
 
 
 
-// falsy.
+
+// falsy значения.
 -
 !!0
     -
@@ -420,8 +327,6 @@ console.log(bird.eats);
 
 
 
-
-
 // деструктуризация.
 const destArr = ['BMW', 'M5'];
 const [namee, modell] = destArr;
@@ -431,6 +336,7 @@ const destObj = {
     subtittle: '11th.'
 };
 const { tittle, subtittle } = destObj;
+
 
 
 
@@ -452,6 +358,7 @@ try {
 } finally {
 
 }
+
 
 
 // способы создания объектов.
@@ -480,9 +387,9 @@ console.log(cuser);
 
 
 
+
 // шаблонные литералы.
 // `` ${}, можно перенести строку.
-
 
 
 
@@ -494,34 +401,6 @@ const object = {
 
 const otherObject = JSON.parse(JSON.stringify(object));
 console.log(otherObject);
-
-
-
-
-
-
-
-// set и map.
-const set1 = new Set();
-
-const johny = { name: 'johny' };
-const alex = { name: 'alex' };
-
-set1.add(johny);
-set1.add(alex);
-
-console.log(set1);
-
-
-
-const map1 = new Map();
-
-map1.set('name1', 'kyle');
-map1.set('name2', 'sam');
-
-console.log(map1);
-
-
 
 
 
@@ -540,7 +419,6 @@ fn.call(fnObj, 'arg1', 'arg2');
 
 
 
-// 14, 20
 
 // async/await.
 async function fetchTodos(url) {
@@ -557,160 +435,3 @@ async function fetchApi(url) {
     const json = await responsive.json();
     json.forEach(item => console.log(item));
 }
-
-
-
-
-
-
-// повторение.
-const createPhrasee = (greeting) => {
-    return (name) => `${greeting}, ${name}!`;
-};
-
-const sayHello = createPhrasee('Hello');
-console.log(sayHello('Danzel'));
-
-
-
-// -
-const mappp = new Map();
-
-mappp.set(true, 'duck');
-console.log(mappp);
-
-
-
-const settt = new Set();
-
-const jimmy = { name: 'Jimmi' };
-
-settt.add(jimmy);
-console.log(settt);
-
-
-
-
-
-// -
-// number
-// string
-// boolean
-// bigint
-// object
-// null
-// undefined
-// symbol
-
-
-
-
-// -
-if (true) {
-    const a = 'a';
-    let b = 'b';
-    var c = 'c';
-}
-
-console.log(c);
-console.log(b);
-console.log(a);
-
-
-
-
-// -
-const nalObj = {
-    name: 'Dakkorta'
-}
-
-
-console.log(nalObj.hasOwnProperty('name'));
-console.log('name' in nalObj);
-
-
-
-// -
-new Promise((resolve, reject) => {
-        if (false) {
-            resolve('Worked!');
-        } else {
-            reject(`Doesn't work!`);
-        }
-    })
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err))
-    .finally((fnll) => console.log(`Completed.`));
-
-
-
-// - 
-console.log(!!0);
-console.log(!!'');
-console.log(false);
-console.log(!!null);
-console.log(!!undefined);
-console.log(!!NaN);
-
-
-
-
-
-// - 
-const littObj = {
-    name: 'Lit'
-}
-
-
-class Usy {
-    constructor(name) {
-        this.name = name;
-    }
-}
-
-const usy = new Usy('Usy');
-console.log(usy);
-
-
-
-function Usu(name) {
-    this.name = name;
-}
-
-const usu = new Usu('Usu');
-console.log(usu);
-
-
-
-
-// - 
-const mapArr = [10, 20, 30, 40, 50];
-const result1 = mapArr.map((el) => {
-    return el + 10;
-});
-console.log(result1);
-
-
-const result2 = mapArr.filter((el) => {
-    return el % 2;
-});
-console.log(result2);
-
-const result3 = mapArr.reduce(
-    function reduceFn(summ, curr) {
-        return summ + curr;
-    }, 10
-);
-
-console.log(result3);
-
-
-
-
-
-
-
-
-
-
-// повторение.
