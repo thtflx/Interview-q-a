@@ -13,13 +13,11 @@ console.log(isPalindrome('uwu'));
 // #2 
 // Функция поиска самого короткого слова?
 function findShort(string) {
-    return string
-        .split(' ')
-        .sort((a, b) => a.length - b.length)[0];
+    return string.split(' ').sort((a, b) => a.length - b.length)[0];
 }
 
 console.log(findShort('Blaim some sheet of bee or tea'));
-// U.F.C.
+// of
 
 
 
