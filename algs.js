@@ -84,40 +84,40 @@
 
 
 
-// #6 
-// Функция создания набора дубликатов символов строки?
-function accum(str) {
-    return str.toUpperCase().split('').map(
-        function(el, i) {
-            return el += el.repeat(i).toLowerCase();
-        }
-    ).join('-');
-}
-
-console.log(accum('abcdef'));
-// A-Bb-Ccc-Dddd-Eeeee-Ffffff
-
-
-
-
-
-
-// // #7 
-// // Функция возврата индексов заглавных букв строки?
-// function capitals(word) {
-//     let res = [];
-//     word
-//         .split('')
-//         .forEach(function(letter, index) {
-//             if (letter === letter.toUpperCase()) {
-//                 res.push(index);
-//             }
-//         });
-//     return res;
+// // #6 
+// // Функция создания набора дубликатов символов строки?
+// function accum(str) {
+//     return str.toUpperCase().split('').map(
+//         function(el, i) {
+//             return el += el.repeat(i).toLowerCase();
+//         }
+//     ).join('-');
 // }
 
-// console.log(capitals('PiEcE oF soaP'));
-// // [ 0, 2,  4, 5, 7, 8, 12 ]
+// console.log(accum('abcdef'));
+// // A-Bb-Ccc-Dddd-Eeeee-Ffffff
+
+
+
+
+
+
+// #7 
+// Функция возврата индексов заглавных букв строки?
+function capitals(word) {
+    let res = [];
+    word
+        .split('')
+        .forEach(function(letter, index) {
+            if (letter === letter.toUpperCase()) {
+                res.push(index);
+            }
+        });
+    return res;
+}
+
+console.log(capitals('PiEcE oF soaP'));
+// [ 0, 2,  4, 5, 7, 8, 12 ]
 
 
 
