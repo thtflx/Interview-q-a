@@ -100,61 +100,6 @@ console.log(accum('abcdef'));
 
 
 
-// Функция проверки палиндрома?
-function isPalindrome(str) {
-    return str === str.split('').reverse().join('');
-}
-
-console.log(isPalindrome('exe'));
-
-// Функция поиска самого короткого слова?
-function findShort(str) {
-    return str.split(' ').sort((a, b) => a.length - b.length)[0];
-}
-
-console.log(findShort('Ваша киска съела бы Вискас.'));
-
-
-// Функция создания инициалов?
-function createInittials(str) {
-    return str
-        .split(' ')
-        .map((el) => `${el.slice(0,1).toUpperCase()}.`)
-        .join('');
-}
-
-console.log(createInittials('The Money Team'));
-
-
-// Функция суммирования всех цифр числа? 
-function sumDig(numb) {
-    return numb
-        .toString()
-        .split('')
-        .reduce(function(summ, curr) {
-            return +summ + +curr
-        }, 0);
-}
-
-console.log(sumDig(33));
-
-
-// Функция поиска минимальных и максимальных значений в массиве?
-function findMinMax(arr) {
-    return [
-        Math.min(...arr), Math.max(...arr)
-    ];
-}
-
-console.log(findMinMax([1, 2, 3, 4, 5]));
-
-
-
-
-
-
-
-
 
 
 // // #7 
