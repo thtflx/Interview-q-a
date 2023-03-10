@@ -27,6 +27,9 @@
 
 
 
+
+
+
 // // #3 
 // // Функция создания инициалов?
 // function toInitials(name) {
@@ -63,6 +66,8 @@
 
 
 
+
+
 // // #5 
 // // Функция поиска минимальных и максимальных значений в массиве?
 // // advanced
@@ -84,18 +89,16 @@
 
 
 
-// // #6 
-// // Функция создания набора дубликатов символов строки?
-// function accum(str) {
-//     return str.toUpperCase().split('').map(
-//         function(el, i) {
-//             return el += el.repeat(i).toLowerCase();
-//         }
-//     ).join('-');
+
+// // #6
+// // Функция поиска гласных букв в строке?
+// const findVowels = (str) => {
+//     const matches = str.match(/[aeiou]/gi);
+//     return matches ? matches.length : 0;
 // }
 
-// console.log(accum('abcdef'));
-// // A-Bb-Ccc-Dddd-Eeeee-Ffffff
+// console.log(findVowels('Hello'));
+// // 2
 
 
 
@@ -104,6 +107,7 @@
 
 // // #7 
 // // Функция возврата индексов заглавных букв строки?
+// // advanced.
 // function capitals(word) {
 //     let res = [];
 //     word
@@ -116,10 +120,19 @@
 //     return res;
 // }
 
-// console.log(capitals('PiEcE oF soaP'));
-// // [ 0, 2,  4, 5, 7, 8, 12 ]
+// console.log(capitals('United fight')); // [0, 6]
 
 
+// // es6.
+// const capitals2 = (word) =>
+//     word.split('').reduce((result, letter, index) => {
+//         if (letter === letter.toUpperCase()) {
+//             result.push(index);
+//         }
+//         return result;
+//     }, []);
+
+// console.log(capitals2('United fight'));
 
 
 
@@ -140,9 +153,9 @@
 // }
 
 // // advanced
-// // function uniteUnique() {
-// //     return [...new Set([...arguments].flat())];
-// // }
+// function uniteUnique() {
+//     return [...new Set([...arguments].flat())];
+// }
 
 // console.log(uniteUnique([1, 2, 3], [4, 1, 5], [6, 7, 8, 5]));
 // // [ 1, 2, 3, 4, 5, 6, 7, 8 ]
@@ -150,7 +163,30 @@
 
 
 
-// // #9 
+
+
+
+
+// // #9
+// // Функция создания набора дубликатов символов строки?
+// function accum(str) {
+//     return str.toUpperCase().split('').map(
+//         function(el, i) {
+//             return el += el.repeat(i).toLowerCase();
+//         }
+//     ).join('-');
+// }
+
+// console.log(accum('abcdef'));
+// // A-Bb-Ccc-Dddd-Eeeee-Ffffff
+
+
+
+
+
+
+
+// // #10
 // // Функция форматирования цифр в телефонный номер?
 // function createPhoneNumber(number) {
 //     let numArr = number.toString().split('');
@@ -163,19 +199,6 @@
 
 // console.log(createPhoneNumber(9035265754));
 // // (903) 526-5754
-
-
-
-
-// // #10
-// // Функция поиска гласных букв в строке?
-// const findVowels = (str) => {
-//     const matches = str.match(/[aeiou]/gi);
-//     return matches ? matches.length : 0;
-// }
-
-// console.log(findVowels('Hello'));
-// // 2
 
 
 
