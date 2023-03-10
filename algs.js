@@ -102,22 +102,22 @@
 
 
 
-// #7 
-// Функция возврата индексов заглавных букв строки?
-function capitals(word) {
-    let res = [];
-    word
-        .split('')
-        .forEach(function(letter, index) {
-            if (letter === letter.toUpperCase()) {
-                res.push(index);
-            }
-        });
-    return res;
-}
+// // #7 
+// // Функция возврата индексов заглавных букв строки?
+// function capitals(word) {
+//     let res = [];
+//     word
+//         .split('')
+//         .forEach(function(letter, index) {
+//             if (letter === letter.toUpperCase()) {
+//                 res.push(index);
+//             }
+//         });
+//     return res;
+// }
 
-console.log(capitals('PiEcE oF soaP'));
-// [ 0, 2,  4, 5, 7, 8, 12 ]
+// console.log(capitals('PiEcE oF soaP'));
+// // [ 0, 2,  4, 5, 7, 8, 12 ]
 
 
 
