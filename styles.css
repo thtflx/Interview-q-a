@@ -7,25 +7,32 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
+    background-color: blanchedalmond;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+.slider {
+    position: relative;
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
+.slider img {
+    position: absolute;
+    left: 0;
+    transition: left 1s ease-in-out;
 }
 
-nav li {
-    margin: 0 10px;
+.slider img:nth-child(2) {
+    left: 100%;
 }
 
-nav a {
-    color: #fff;
-    text
+
+/* .slider img:not(:last-child) {
+    margin-right: 60px;
+} */
+
+.slider img.active {
+    left: -100%;
+}
+
+.slider img.active+img {
+    left: 0;
 }

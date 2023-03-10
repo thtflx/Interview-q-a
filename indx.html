@@ -9,66 +9,42 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">My Projects</a></li>
-                <li><a href="#contact">Contact Me</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="slider">
+        <img src="home-img-1.png" alt="Image 1" width="250" height="250">
+        <img src="home-img-2.png" alt="Image 2" width="250" height="250">
+        <img src="home-img-3.png" alt="Image 3" width="250" height="250">
+    </div>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi, my name is John Doe and I am a web developer with 3 years of experience. I specialize in HTML, CSS, JavaScript, and ReactJS.</p>
-        </section>
 
-        <section id="projects">
-            <h2>My Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a href="#">Learn More</a>
-            </div>
+    <script>
+        const slides = document.querySelectorAll(".slider img");
+        let currentSlide = 0;
 
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a href="#">Learn More</a>
-            </div>
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[index].classList.add("active");
+        }
 
-            <div class="project">
-                <h3>Project 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a href="#">Learn More</a>
-            </div>
-        </section>
+        document.querySelector(".prev").addEventListener("click", () => {
+            currentSlide--;
+            if (currentSlide < 0) {
+                currentSlide = slides.length - 1;
+            }
+            showSlide(currentSlide);
+        });
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message"></textarea>
-
-                <input type="submit" value="Submit">
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
-    </footer>
-
-    <script type="text/javascript" src="script.js"></script>
+        document.querySelector(".next").addEventListener("click", () => {
+            currentSlide++;
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+            showSlide(currentSlide);
+        });
+    </script>
+    <!-- <script type="text/javascript" src="script.js"></script> -->
 </body>
+
+
 
 </html>
 
