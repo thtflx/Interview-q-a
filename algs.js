@@ -121,22 +121,6 @@ console.log(capitals('PiEcE oF soaP'));
 
 
 
-function capt(str) {
-    let res = [];
-    str
-        .split('')
-        .forEach(
-            function(letter, index) {
-                if (letter === letter.toUpperCase()) {
-                    res.push(index);
-                }
-            }
-        );
-    return res;
-}
-console.log(capt('Жизнь моя недороже любого песка'));
-
-
 
 
 

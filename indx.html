@@ -1,4 +1,85 @@
 <!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">My Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi, my name is John Doe and I am a web developer with 3 years of experience. I specialize in HTML, CSS, JavaScript, and ReactJS.</p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div class="project">
+                <h3>Project 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,14 +87,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test-zone</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- <form onsubmit="return false" oninput="o.value = a.valueAsNumber + b.valueAsNumber">
-        <input name="a" type="number">+
-        <input name="b" type="number">=
-        <output name="o" for="a b"></output>
-    </form> -->
+    <div class="audio-player">
+        <audio src="audio-file.mp3" class="audio" preload="metadata"></audio>
+        <div class="controls">
+            <button class="play-pause-btn"></button>
+            <div class="timeline">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        const audioPlayer = document.querySelector(".audio-player");
+        const audio = audioPlayer.querySelector(".audio");
+        const playPauseBtn = audioPlayer.querySelector(".play-pause-btn");
+        const timeline = audioPlayer.querySelector(".timeline");
+        const progress = audioPlayer.querySelector(".progress");
+
+        function togglePlayPause() {
+            if (audio.paused) {
+                playPauseBtn.classList.add("paused");
+                audio.play();
+            } else {
+                playPauseBtn.classList.remove("paused");
+                audio.pause();
+            }
+        }
+
+        function updateProgress() {
+            const progressPercent = (audio.currentTime / audio.duration) * 100;
+            progress.style.width = `${progressPercent}%`;
+        }
+
+        playPauseBtn.addEventListener("click", togglePlayPause);
+        audio.addEventListener("timeupdate", updateProgress);
+        timeline.addEventListener("click", (e) => {
+            const clickX = e.offsetX;
+            const timelineWidth = timeline.offsetWidth;
+            const newTime = (clickX / timelineWidth) * audio.duration;
+            audio.currentTime = newTime;
+        });
+    </script>
 </body>
 
-</html>
+</html> -->
