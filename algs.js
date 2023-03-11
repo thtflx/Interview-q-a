@@ -14,6 +14,8 @@
 
 
 
+
+
 // // #2 
 // // Функция поиска самого короткого слова?
 // function findShort(string) {
@@ -22,6 +24,9 @@
 
 // console.log(findShort('Blaim some sheet of bee or tea'));
 // // of
+
+
+
 
 
 
@@ -46,6 +51,9 @@
 
 
 
+
+
+
 // // #4 
 // // Функция суммирования всех цифр числа? 
 // function sumDigits(number) {
@@ -61,6 +69,7 @@
 
 // console.log(sumDigits(33));
 // // 6
+
 
 
 
@@ -90,6 +99,8 @@
 
 
 
+
+
 // // #6
 // // Функция поиска гласных букв в строке?
 // const findVowels = (str) => {
@@ -99,6 +110,8 @@
 
 // console.log(findVowels('Hello'));
 // // 2
+
+
 
 
 
@@ -139,6 +152,11 @@
 
 
 
+
+
+
+
+
 // // #8
 // // Функция возврата уникальных значений из нескольких массивов?
 // // base
@@ -167,6 +185,8 @@
 
 
 
+
+
 // // #9
 // // Функция создания набора дубликатов символов строки?
 // function accum(str) {
@@ -179,6 +199,8 @@
 
 // console.log(accum('abcdef'));
 // // A-Bb-Ccc-Dddd-Eeeee-Ffffff
+
+
 
 
 
