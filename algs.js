@@ -534,7 +534,6 @@
 
 // Функция возврата индексов заглавных букв строки?
 
-
 // console.log(findCapitals('Bonjour!'));
 
 
@@ -555,8 +554,12 @@
 
 
 // Функция возврата уникальных значений из нескольких массивов?
+function uniteUnique() {
+    const result = [...new Set([...arguments].flat(5))];
+    return result.sort((a, b) => { return a - b });
+}
 
-// console.log(uniteUnique([12, 34, 5, [5, 6, 6, [9042, 39435820, 493]]]));
+console.log(uniteUnique([12, 34, 5, [5, 6, 6, [9042, 39435820, 493]]])); // [ 5, 6, 12, 34, 493, 9042, 39435820 ]
 
 
 
@@ -564,9 +567,27 @@
 
 
 // Функция поиска минимальных и максимальных значений в массиве?
+function minMax(arr) {
+    return [
+        Math.min(...arr),
+        Math.max(...arr)
+    ]
+}
 
-// console.log(minMax([2434, 5243, 531, 0]));
+console.log(minMax([2434, 5243, 531, 0, [1, 4, 7, 1463, 50904, 33]])); // [ 0, 5243 ]
 
+
+
+
+// function largestOfFour(arr) {
+//     return []
+// }
+// console.log(largestOfFour([
+//     [4, 5, 1, 3],
+//     [13, 27, 18, 26],
+//     [32, 35, 37, 39],
+//     [1000, 1001, 857, 1]
+// ]));
 
 
 
