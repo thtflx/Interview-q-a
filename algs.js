@@ -175,7 +175,14 @@
 //     return [...new Set([...arguments].flat())];
 // }
 
-// console.log(uniteUnique([1, 2, 3], [4, 1, 5], [6, 7, 8, 5]));
+// // updated advanced
+// function uniteUnique() {
+//     const result = [...new Set([...arguments].flat())];
+//     return result.sort((a, b) => a - b);
+// }
+
+
+// console.log(uniteUnique([1, 2, 9, 3], [4, 10, 1, 5], [6, 7, 8, 5]));
 // // [ 1, 2, 3, 4, 5, 6, 7, 8 ]
 
 
@@ -301,6 +308,7 @@
 
 
 // // -----------------------------------------------------------------------------------------
+
 
 
 
@@ -489,3 +497,20 @@
 
 // console.log(booWho(true));
 // // true
+
+
+
+
+
+
+
+
+
+let arr = [1, 6, 7, 2, 5, 8, 3, 4, 10, 9];
+let res = arr.sort(
+    function(a, b) {
+        return a - b;
+    }
+);
+
+console.log(res);
