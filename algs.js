@@ -527,66 +527,36 @@
 
 // Функция поиска гласных букв в строке?
 
-function findVowels(str) {
-    const matches = str.match(/[aeuio]/gi);
-    return matches ? matches.length : 0;
-}
 
-console.log(findVowels('Hello'));
+// console.log(findVowels('Hello'));
 
 
 
 
 // Функция возврата индексов заглавных букв строки?
-function findCapitals(word) {
-    let res = [];
-    word
-        .split('')
-        .forEach(function(letter, index) {
-            if (letter === letter.toUpperCase()) {
-                res.push(index);
-            }
-        })
-    return res;
-}
 
-console.log(findCapitals('Bonjour!'));
+// console.log(findCapitals('Bonjour!'));
 
 
 
 
 // Функция создания инициалов?
-function toInitials(str) {
-    return str
-        .split(' ')
-        .map((el) => `${el.slice(0,1).toUpperCase()}.`)
-        .join('');
-}
 
-console.log(toInitials('United Fight Club'));
+// console.log(toInitials('United Fight Club'));
 
 
 
 
 // Функция поиска самого короткого слова?
-function findShort(str) {
-    return str
-        .split(' ')
-        .sort((a, b) => a.length - b.length)[0];
-}
 
-console.log(findShort('Улыбайся чаще !'));
+// console.log(findShort('Улыбайся чаще !'));
 
 
 
 
 // Функция возврата уникальных значений из нескольких массивов?
-function uniteUnique() {
-    const result = [...new Set([...arguments].flat(4))];
-    return result.sort((a, b) => { return a - b });
-}
 
-console.log(uniteUnique([12, 34, 5, [5, 6, 6, [9042, 39435820, 493]]])); // [ 5, 6, 12, 34, 493, 9042, 39435820 ]
+// console.log(uniteUnique([12, 34, 5, [5, 6, 6, [9042, 39435820, 493]]])); // [ 5, 6, 12, 34, 493, 9042, 39435820 ]
 
 
 
@@ -594,40 +564,23 @@ console.log(uniteUnique([12, 34, 5, [5, 6, 6, [9042, 39435820, 493]]])); // [ 5,
 
 
 // Функция поиска минимальных и максимальных значений в массиве?
-function minMax(arr) {
-    return [
-        Math.min(...arr),
-        Math.max(...arr)
-    ];
-}
 
-console.log(minMax([2434, 5243, 531, 0, 1, 4, 7, 1463, 50904, 33])); // [ 0, 5243 ]
+// console.log(minMax([2434, 5243, 531, 0, [1, 4, 7, 1463, 50904, 33]])); // [ 0, 5243 ]
 
 
 
 
 
 // Функция суммирования всех цифр числа? 
-function sumDigits(num) {
-    return Math.abs(num)
-        .toString()
-        .split('')
-        .reduce(function(sum, curr) {
-            return +sum + +curr;
-        }, 0);
-}
 
-console.log(sumDigits(33));
+// console.log(sumDigits(33));
 
 
 
 
 // Функция проверки палиндрома?
-function isPalindrome(str) {
-    return str === str.split('').reverse().join('');
-}
 
-console.log(isPalindrome('uwu'));
+// console.log(isPalindrome('Toretto'));
 
 
 
