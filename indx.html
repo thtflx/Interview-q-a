@@ -2,47 +2,26 @@
 <html>
 
 <head>
-    <title>My Portfolio</title>
+    <title>test-zone.</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-    <div class="slider">
-        <img src="home-img-1.png" alt="Image 1" width="250" height="250">
-        <img src="home-img-2.png" alt="Image 2" width="250" height="250">
-        <img src="home-img-3.png" alt="Image 3" width="250" height="250">
+    <form onsubmit="return false" oninput="o.value = a.valueAsNumber + b.valueAsNumber">
+        <input name="a" type="number">+
+        <input name="b" type="number">=
+        <output name="o" for="a b"></output>
+    </form>
+
+    <div style="padding: 20px;">
+        <a href="#" style="color:rgb(7, 53, 53); margin-right: 20px;">with text-decoration</a>
+        <a href="#" style="color:darkcyan; text-decoration-skip-ink: none;">with skip-text-decoration</a>
     </div>
 
-
-    <script>
-        const slides = document.querySelectorAll(".slider img");
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove("active"));
-            slides[index].classList.add("active");
-        }
-
-        document.querySelector(".prev").addEventListener("click", () => {
-            currentSlide--;
-            if (currentSlide < 0) {
-                currentSlide = slides.length - 1;
-            }
-            showSlide(currentSlide);
-        });
-
-        document.querySelector(".next").addEventListener("click", () => {
-            currentSlide++;
-            if (currentSlide >= slides.length) {
-                currentSlide = 0;
-            }
-            showSlide(currentSlide);
-        });
-    </script>
-    <!-- <script type="text/javascript" src="script.js"></script> -->
 </body>
+
 
 
 
